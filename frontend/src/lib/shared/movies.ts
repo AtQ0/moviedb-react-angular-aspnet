@@ -18,3 +18,7 @@ export type TmdbGenre = {
     id: number;
     name: string;
 }
+
+
+
+export type ApiError = { message: string };

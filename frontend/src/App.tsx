@@ -21,7 +21,7 @@ function App() {
           </div>
         </div>
 
-        <main className="p-3 flex-1 flex flex-col gap-3">
+        <main className="p-3 flex-1 flex flex-col gap-8">
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
