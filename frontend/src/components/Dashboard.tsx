@@ -15,7 +15,7 @@ export default function Dashboard() {
             try {
                 setReqError(null);
 
-                const trendingMovies = await fetchJson("/api/movies", { signal: ac.signal }) as MovieDTO[];
+                const trendingMovies = await fetchJson("/api/movies/trending", { signal: ac.signal }) as MovieDTO[];
 
                 setTrendingMovies(trendingMovies);
             } catch (err) {
