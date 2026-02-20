@@ -11,4 +11,9 @@ public record MovieDto(
     int RatingCount,
     double Popularity,
     int[] GenreIds
-)
+);
+
+public record GenreDto(
+    int Id,
+    string Name
+);
