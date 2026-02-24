@@ -19,9 +19,13 @@ yarn-error.log*
 pnpm-debug.log*
 .pnpm-store/
 
-# Vite / build
-frontend/dist/
-frontend/.vite/
+# React (Vite) frontend
+frontend-react/dist/
+frontend-react/.vite/
+
+# Angular frontend
+frontend-angular/dist/
+frontend-angular/.angular/
 
 # .NET
 **/bin/
