@@ -29,7 +29,11 @@
     "@angular/forms": "^21.1.0",
     "@angular/platform-browser": "^21.1.0",
     "@angular/router": "^21.1.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-angular": "^0.575.0",
     "rxjs": "~7.8.0",
+    "tailwind-merge": "^3.5.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

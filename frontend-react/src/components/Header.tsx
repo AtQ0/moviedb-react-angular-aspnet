@@ -5,11 +5,11 @@ export default function Header() {
     return (
         <header>
             <nav className="flex flex-col gap-2">
-                <div className="flex items-center justify-between font-bold relative h-10 min-sm:hidden">
+                <div className="flex items-center justify-between font-bold relative h-10 sm:hidden">
                     <a href="/">Movies</a>
                     <SidebarTrigger />
                 </div>
-                <div className="min-sm:h-15 flex items-center ">
+                <div className="sm:h-15 flex items-center ">
                     <SearchBar />
                 </div>
             </nav>

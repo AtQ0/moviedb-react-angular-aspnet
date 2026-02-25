@@ -1,10 +1,13 @@
 import { Component } from "@angular/core";
+import { DashBoard } from "../../components/dash-board/dash-board";
 
 @Component({
     selector: 'app-home',
+    imports: [DashBoard],
     template: `
-        <h2>Home Page</h2>
-        <p>Welcome to movie database</p>
+    <section class="h-full">
+        <app-dash-board />
+    </section>
     `,
 })
 export class Home { }
