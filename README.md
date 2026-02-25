@@ -42,7 +42,7 @@ Open http://localhost:5173
 
 **Terminal 3 (Angular frontend):**
 ```bash
-cd frontend-angular && npm install && ng serve
+cd frontend-angular && npm install && npm start
 ```
 Open http://localhost:4200
 
