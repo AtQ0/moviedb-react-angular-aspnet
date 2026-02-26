@@ -1,6 +1,6 @@
 <nav class="flex flex-col gap-2 justify-center w-fit">
     @for (link of links; track link.path) {
-    <a [routerLink]="link.path" class="flex items-center gap-1">
+    <a [routerLink]="link.path" class="flex items-center gap-1" (click)="onLinkClick()">
         <lucide-icon [name]="link.icon" class="w-4 h-4"></lucide-icon>
         {{ link.label }}
     </a>

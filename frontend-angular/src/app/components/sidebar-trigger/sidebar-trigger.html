@@ -1,0 +1,28 @@
+<div class="flex items-center justify-center">
+
+
+    <!-- If sidebar is closed, show the menu (hamburger) icon -->
+    @if (!isOpen()) {
+    <button type="button" (click)="toggleSidebar()">
+        <lucide-icon name="menu" class="w-6 h-6"></lucide-icon>
+    </button>
+    }
+
+    <!-- If sidebar open, show backdrop and close (X) icon -->
+    @if (isOpen()) {
+    <div class="flex justify-between items-center absolute top-1 right-0 z-50">
+        <button type="button" (click)="toggleSidebar()" aria-label=" Close menu">
+            <lucide-icon name="x" class="w-6 h-6"></lucide-icon>
+        </button>
+    </div>
+
+    <div class="fixed inset-0 bg-black/50 z-40" aria-hidden="true" (click)="toggleSidebar()"></div>
+
+    <aside class="fixed bg-black top-0 left-0 h-full w-74 border-r border-gray-500 z-50 p-8 shadow-xl pt-15"
+        role="dialog" aria-label="Sidebar menu">
+
+        <app-nav-links (linkClick)="toggleSidebar()"></app-nav-links>
+    </aside>
+    }
+
+</div>
