@@ -26,32 +26,33 @@ Following is a short preview of the main folder structure. Expand the section be
 moviedb-react-angular-aspnet/
 ├── frontend-react/
 │   └── src/
+│       ├── assets/
 │       ├── components/
-│       ├── pages/
 │       ├── lib/
-│       └── App.tsx
+│       ├── pages/
+│       ├── App.tsx
+│       └── main.tsx
 │
 ├── frontend-angular/
 │   └── src/
-│       ├── app/
-│       │   ├── components/
-│       │   ├── pages/
-│       │   ├── services/
-│       │   └── shared/
-│       │       └── models/
-│       │
-│       ├── index.html
-│       ├── main.ts
-│       └── styles.css
+│       └── app/
+│           ├── components/
+│           ├── pages/
+│           ├── services/
+│           └── shared/
+│               └── models/
 │
 ├── backend/
 │   ├── Endpoints/
 │   ├── Services/
 │   ├── Models/
-│   └── Program.cs
+│   ├── Dtos/
+│   ├── Properties/
+│   ├── Program.cs
+│   └── MovieDb.Api.csproj
 │
-├── README.md
-└── .gitignore
+├── .gitignore
+└── README.md
 ```
 
 <details> <summary><strong>Click to view full project structure</strong></summary>
@@ -172,9 +173,7 @@ moviedb-react-angular-aspnet/
 │
 ├── .gitignore
 └── README.md
-```
-
-</details>
+```</details>
 
 ## Prerequisites
 
