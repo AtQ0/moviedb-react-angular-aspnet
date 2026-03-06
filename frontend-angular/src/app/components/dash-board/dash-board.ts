@@ -30,24 +30,26 @@ const INITIAL_STATE: {
         @if (error()) {
           <div class="text-red-500">{{ error() }}</div>
         } @else {
-          <app-movies-section
-            title="Trending"
-            [movies]="trendingMovies()"
-            [limit]="2"
-            type="backdrop"
-          />
-          <app-movies-section
-            title="Top Rated"
-            [movies]="topRatedMovies()"
-            [limit]="5"
-            type="poster"
-          />
-          <app-movies-section
-            title="Now Playing"
-            [movies]="nowPlayingMovies()"
-            [limit]="5"
-            type="poster"
-          />
+          <div class="flex flex-col gap-4">
+            <app-movies-section
+              title="Trending"
+              [movies]="trendingMovies()"
+              [limit]="2"
+              type="backdrop"
+            />
+            <app-movies-section
+              title="Top Rated"
+              [movies]="topRatedMovies()"
+              [limit]="5"
+              type="poster"
+            />
+            <app-movies-section
+              title="Now Playing"
+              [movies]="nowPlayingMovies()"
+              [limit]="5"
+              type="poster"
+            />
+          </div>
         }
       </section>
     }

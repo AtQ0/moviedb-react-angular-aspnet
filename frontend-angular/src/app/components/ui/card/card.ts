@@ -1,19 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
-  imports: [],
+  standalone: true,
   template: `
-    <div class="bg-card text-card-foreground rounded-xl border shadow-sm p-6 flex flex-col gap-6">
+    <div [class]="type() === 'poster' ? posterWrapperClass : backdropWrapperClass">
       <ng-content></ng-content>
     </div>
   `,
 })
-export class Card {}
+export class Card {
+  readonly type = input<'poster' | 'backdrop'>('poster');
+
+  readonly posterWrapperClass =
+    'group relative w-fit rounded-md border border-transparent transition-[border-color,opacity] hover:border-white';
+  readonly backdropWrapperClass = 'relative';
+}
 
 @Component({
   selector: 'app-card-header',
-  imports: [],
+  standalone: true,
   template: `
     <div class="grid gap-2 px-6">
       <ng-content></ng-content>
@@ -24,7 +30,7 @@ export class CardHeader {}
 
 @Component({
   selector: 'app-card-title',
-  imports: [],
+  standalone: true,
   template: `
     <div class="font-semibold leading-none">
       <ng-content></ng-content>
@@ -59,7 +65,7 @@ export class CardAction {}
   selector: 'app-card-content',
   standalone: true,
   template: `
-    <div class="px-6">
+    <div>
       <ng-content></ng-content>
     </div>
   `,
