@@ -1,7 +1,7 @@
 <main class="flex h-screen bg-black text-white">
   <!-- Sidebar -->
   <aside
-    class="max-sm:hidden w-64 shrink-0 border-r border-gray-700 flex flex-col items-center py-6"
+    class="max-sm:hidden w-64 shrink-0 border-r border-gray-500 flex flex-col items-center py-6"
   >
     <!-- Logo -->
     <a routerLink="/" class="mb-10">
@@ -17,12 +17,12 @@
   <!-- Right Side (Header + Page Content) -->
   <div class="flex-1 flex flex-col min-h-0">
     <!-- Header -->
-    <header class="px-4 py-2 border-gray-800">
+    <header class="px-4 py-2">
       <app-header></app-header>
     </header>
 
     <!-- Scrollable Page Content -->
-    <section class="flex-1 overflow-auto px-4 py-4 bg-gray-900">
+    <section class="flex-1 overflow-auto px-4 py-4">
       <router-outlet></router-outlet>
     </section>
   </div>
