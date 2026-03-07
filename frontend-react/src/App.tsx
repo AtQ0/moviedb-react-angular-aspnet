@@ -1,13 +1,11 @@
-import { Routes, Route } from 'react-router-dom'
-import './App.css'
-import HomePage from './pages/HomePage'
-import Header from './components/Header'
-import NavLinks from './components/NavLinks'
-import DiscoverPage from './pages/DiscoverPage'
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import HomePage from "./pages/HomePage";
+import Header from "./components/Header";
+import NavLinks from "./components/NavLinks";
+import DiscoverPage from "./pages/DiscoverPage";
 
 function App() {
-
-
   return (
     <div className="flex flex-col h-screen overflow-hidden">
       <div className="flex flex-row flex-1 min-h-0">
@@ -33,7 +31,7 @@ function App() {
         </main>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

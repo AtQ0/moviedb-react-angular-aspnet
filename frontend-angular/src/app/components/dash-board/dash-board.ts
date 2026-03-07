@@ -30,7 +30,7 @@ const INITIAL_STATE: {
         @if (error()) {
           <div class="text-red-500">{{ error() }}</div>
         } @else {
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-10 py-3">
             <app-movies-section
               title="Trending"
               [movies]="trendingMovies()"
