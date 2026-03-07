@@ -23,7 +23,7 @@ const DISCOVER_GENRE_NAMES = [
   standalone: true,
   imports: [MoviesSection, GenreFilterButtons],
   template: `
-    <div class="py-2 text-left flex flex-col gap-6 pt-15 sm:pt-6">
+    <div class="text-left flex flex-col gap-6 pt-15 sm:pt-6">
       @if ((filteredGenres()?.length ?? 0) > 0) {
         <app-genre-filter-buttons [genres]="filteredGenres()!" />
       }
