@@ -24,17 +24,17 @@ const DISCOVER_GENRE_NAMES = [
   imports: [MoviesSection, GenreFilterButtons],
   template: `
     <div class="text-left flex flex-col gap-6 pt-15 sm:pt-6">
-      @if ((filteredGenres()?.length ?? 0) > 0) {
-        <app-genre-filter-buttons [genres]="filteredGenres()!" />
+      @if (filteredGenres().length > 0) {
+        <app-genre-filter-buttons [genres]="filteredGenres()" />
       }
       <div>
         <h1 class="text-2xl font-bold">Discover</h1>
 
         <app-movies-section
           title=""
-          [movies]="moviesResult()?.movies ?? []"
-          [moviesLoading]="moviesResult()?.loading ?? false"
-          [moviesError]="moviesResult()?.error ?? null"
+          [movies]="moviesResult().movies"
+          [moviesLoading]="moviesResult().loading"
+          [moviesError]="moviesResult().error"
         />
       </div>
     </div>
