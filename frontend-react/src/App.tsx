@@ -7,30 +7,31 @@ import DiscoverPage from "./pages/DiscoverPage";
 
 function App() {
   return (
-    <div className="flex flex-col h-screen overflow-hidden">
-      <div className="flex flex-row flex-1 min-h-0">
-        {/* Sidebar - static, no scroll */}
-        <div className="max-sm:hidden w-69.5 shrink-0 border-r border-gray-500 flex flex-col items-center h-full overflow-hidden py-5">
-          <a href="/">
-            <h2 className="text-xl font-semibold">Movies</h2>
-          </a>
-          <div className="flex-1 flex flex-col justify-center px-4">
-            <NavLinks />
-          </div>
+    <main className="min-h-screen bg-black text-white">
+      {/* Sidebar - fixed, hidden on small screens */}
+      <aside className="max-sm:hidden fixed left-0 top-0 bottom-0 z-10 w-64 shrink-0 border-r border-gray-500 flex flex-col items-center py-6">
+        <a href="/">
+          <h2 className="text-xl font-semibold">Movies</h2>
+        </a>
+        <div className="flex-1 flex flex-col justify-center w-full px-4 items-center pb-20">
+          <NavLinks />
         </div>
+      </aside>
 
-        {/* Main: header static, only route content scrolls */}
-        <main className="flex-1 flex flex-col min-h-0 p-3 gap-8">
+      {/* Right side - margin when sidebar visible */}
+      <div className="ml-0 sm:ml-64">
+        <header className="fixed top-0 left-0 right-0 sm:left-64 z-10 bg-black px-4 py-2">
           <Header />
-          <div className="flex-1 min-h-0 overflow-y-auto">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/discover" element={<DiscoverPage />} />
-            </Routes>
-          </div>
-        </main>
+        </header>
+
+        <section className="px-4 pt-20 sm:pt-14 pb-3">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/discover" element={<DiscoverPage />} />
+          </Routes>
+        </section>
       </div>
-    </div>
+    </main>
   );
 }
 
