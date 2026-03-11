@@ -34,7 +34,9 @@ moviedb-react-angular-aspnet/
 │   └── src/
 │       ├── assets/
 │       ├── components/
+│       │   └── ui/
 │       ├── lib/
+│       │   └── shared/
 │       ├── pages/
 │       ├── App.tsx
 │       └── main.tsx
@@ -43,6 +45,8 @@ moviedb-react-angular-aspnet/
 │   └── src/
 │       └── app/
 │           ├── components/
+│           │   ├── ui/
+│           │   └── ...
 │           ├── pages/
 │           ├── services/
 │           └── shared/
@@ -100,9 +104,20 @@ moviedb-react-angular-aspnet/
 │   │   ├── index.css
 │   │   └── main.tsx
 │   │
+│   ├── public/
+│   │   └── vite.svg
+│   │
+│   ├── index.html
 │   ├── package.json
 │   ├── tsconfig.json
-│   └── vite.config.ts
+│   ├── tsconfig.app.json
+│   ├── tsconfig.node.json
+│   ├── vite.config.ts
+│   ├── tailwind.config.ts
+│   ├── eslint.config.js
+│   ├── components.json
+│   ├── .gitignore
+│   └── README.md
 │
 ├── frontend-angular/
 │   ├── src/
@@ -122,6 +137,9 @@ moviedb-react-angular-aspnet/
 │   │       │   ├── dash-board/
 │   │       │   │   └── dash-board.ts
 │   │       │   │
+│   │       │   ├── genre-filter-buttons/
+│   │       │   │   └── genre-filter-buttons.ts
+│   │       │   │
 │   │       │   ├── header/
 │   │       │   │   └── header.ts
 │   │       │   │
@@ -133,12 +151,17 @@ moviedb-react-angular-aspnet/
 │   │       │   │   └── nav-links.ts
 │   │       │   │
 │   │       │   ├── search-bar/
-│   │       │   │   ├── search-bar.html
 │   │       │   │   └── search-bar.ts
 │   │       │   │
-│   │       │   └── sidebar-trigger/
-│   │       │       ├── sidebar-trigger.html
-│   │       │       └── siderbar-trigger.ts
+│   │       │   ├── sidebar-trigger/
+│   │       │   │   ├── sidebar-trigger.html
+│   │       │   │   └── siderbar-trigger.ts
+│   │       │   │
+│   │       │   └── ui/
+│   │       │       ├── button/
+│   │       │       │   └── button.ts
+│   │       │       └── card/
+│   │       │           └── card.ts
 │   │       │
 │   │       ├── pages/
 │   │       │   ├── discover/
@@ -154,6 +177,20 @@ moviedb-react-angular-aspnet/
 │   │           └── models/
 │   │               └── movie.dto.ts
 │   │
+│   ├── public/
+│   │   └── favicon.ico
+│   │
+│   ├── angular.json
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.spec.json
+│   ├── proxy.conf.json
+│   ├── .postcssrc.json
+│   ├── .editorconfig
+│   ├── .gitignore
+│   └── README.md
+│
 ├── backend/
 │   ├── Dtos/
 │   │   └── Movies/
@@ -164,20 +201,26 @@ moviedb-react-angular-aspnet/
 │   │   └── MoviesEndpoints.cs
 │   │
 │   ├── Models/
-│   │   ├── TmdbModels.cs
-│   │   └── (other domain models)
+│   │   └── TmdbModels.cs
 │   │
 │   ├── Services/
 │   │   ├── MovieService.cs
 │   │   └── TmdbClient.cs
 │   │
 │   ├── Properties/
-│   │   ├── launchSettings.json
-│   │   └── appsettings*.json
+│   │   └── launchSettings.json
 │   │
 │   ├── Program.cs
-│   └── MovieDb.Api.csproj
+│   ├── MovieDb.Api.csproj
+│   ├── MovieDb.Api.http
+│   ├── appsettings.json
+│   └── appsettings.Development.json.example
 │
+├── .vscode/
+│   ├── launch.json
+│   └── tasks.json
+│
+├── moviedb-react-aspnet.sln
 ├── .gitignore
 └── README.md
 ```
@@ -188,7 +231,7 @@ moviedb-react-angular-aspnet/
 
 - .NET SDK
 - Node.js (LTS)
-- **TMDB API key** — Backend uses [The Movie Database](https://www.themoviedb.org/settings/api); add your key to `backend/appsettings.Development.json` (see `TmdbApiKey` or your config key name).
+- **TMDB read access token** - Backend uses [The Movie Database](https://www.themoviedb.org/settings/api). Add your read access token to `backend/appsettings.Development.json` under `Tmdb:ReadAccessToken`. You can copy `backend/appsettings.Development.json.example` to `appsettings.Development.json` and replace the placeholder with your token.
 
 ## Run locally
 
